@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>상품 관리 프로그램</title>
+	<link type="text/css" rel="stylesheet" href="maincss.css">
+	<script type="text/javascript" src="confirmation.js"></script>
+</head>
+
+<!-- 상품 등록 화면 -->
+
+<body>
+	
+	<h5 align="center"> 상품 관리 프로그램</h5>
+ 	<div id="main">
+ 		<ul> 
+ 			<li><a href="insert.html">&nbsp;&nbsp;상품 등록 &nbsp; &nbsp;</a></li> 
+ 			<li><a href="update.html">상품 수정 &nbsp; &nbsp;</a></li>
+ 			<li><a href="delete.html">상품 삭제 &nbsp; &nbsp;</a></li>
+ 			<li><a href="select.html">상품 검색 &nbsp; &nbsp;</a></li>
+ 			<li><a href="selectAll.jsp">상품 리스트</a></li>
+ 		</ul>
+ 		
+ 	</div>
+	
+	<div id="substance">
+		<h3>상품을 입력해 주세요</h3>
+			
+			ID:  <br>
+			<input type="text" name="id" id="id"> <br>
+			
+			TITLE:  <br>
+			<input type="text" name="title" id="title"> <br>
+			
+			CONTENT: <br>
+			<textarea rows="5" cols="21" name="content" id="content"></textarea> <br>
+			
+			PRICE:  <br>
+			<input type="text" name="price" id="price"> <br><br>
+			
+			<!-- 버튼 클릭시 confirmation.js 파일의  check() 메소드를 호출
+				 공란이 없을 시 DB 테이블에 상품 등록
+			 -->
+			<button type="button" onclick="check()">등록</button>
+			<input type="reset"  value="초기화">
+			
+	</div>
+</body>
+</html>
